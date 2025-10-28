@@ -2,8 +2,8 @@ import AssetCompanyChart from "../components/charts/AssetCompanyChart";
 import AssetStatusChart from "../components/charts/AssetStatusChart";
 import AssetCategoryChart from "../components/charts/AssetCategoryChart";
 
-import Navbar from "../components/Navbar";
-import Sidebar  from "../components/Sidebar";
+import Navbar from "../components/NavBar";
+import Sidebar  from "../components/SideBar";
 import SummaryCard  from "../components/SummaryCard";
 
 import AssetTrendChart from "../components/charts/AssetTrendChart";
