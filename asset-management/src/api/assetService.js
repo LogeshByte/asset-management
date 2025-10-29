@@ -1,14 +1,14 @@
 import axios from "axios";
 
-//  Base API URL — using the actual backend endpoint
-const BASE_URL = "http://mailpointapi.chenduratechnology.com/api/Asset";
+//  Base API URL — using environment variable from .env
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 //  Axios instance
 const api = axios.create({
   baseURL: BASE_URL,
   headers: {
     "Content-Type": "application/json",
-    TokenVal: "JOKvcOEV3kgVtNryyByRRo++k4Bkixts",
+    TokenVal: import.meta.env.VITE_API_TOKEN,
   },
 });
 
@@ -17,8 +17,8 @@ export const getAssetList = async () => {
   try {
     const body = {
       AssetKey: 0,
-      CreatedUserKey: 1022,
-      CreatedBy: "Vigramraj",
+      CreatedUserKey: import.meta.env.VITE_DEFAULT_USER_KEY,
+      CreatedBy: import.meta.env.VITE_DEFAULT_USER_NAME,
     };
 
     const response = await api.post("/GetAssetList", body);
@@ -56,8 +56,8 @@ export const getDataDashboard = async (overrides = {}) => {
       CompanyKey: "0",
       CityKey: 0,
       SiteKey: 0,
-      CreatedUserKey: 1022,
-      CreatedBy: "Vigramraj",
+      CreatedUserKey: import.meta.env.VITE_DEFAULT_USER_KEY,
+      CreatedBy: import.meta.env.VITE_DEFAULT_USER_NAME,
       ...overrides,
     };
 
