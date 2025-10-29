@@ -32,7 +32,10 @@ It integrates with a real-time REST API and provides search, sorting, pagination
 ```cmd
 git clone https://github.com/LogeshByte/asset-management.git
 
-cd asset-management
+cd asset-management && cd asset-management
+or
+cd asset-management/asset-management
+
 
 2️ Install Dependencies
 
